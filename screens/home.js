@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, SafeAreaView, StatusBar } from 'react-native';
+import { StyleSheet, View, SafeAreaView, StatusBar, ScrollView } from 'react-native';
 import HeaderApp from '../components/header';
 import SearchBar from '../components/SearchBar';
 import Categories from '../components/Categories';
+import RestorauntItem from '../components/RestorauntItem';
 
 const Home = () => {
     return (
@@ -11,7 +12,14 @@ const Home = () => {
              <HeaderApp />
              <SearchBar /> 
             </View>
-            <Categories />
+            <ScrollView showsHorizontalScrollIndicator={false}> 
+                <Categories />
+                <RestorauntItem />
+                <RestorauntItem />
+                <RestorauntItem />
+                <RestorauntItem />
+                <RestorauntItem />
+            </ScrollView>
         </SafeAreaView>
 
     );
