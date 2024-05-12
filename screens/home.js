@@ -4,7 +4,7 @@ import HeaderApp from '../components/header';
 import SearchBar from '../components/SearchBar';
 import Categories from '../components/Categories';
 import RestorauntItems, {localRestaurants} from '../components/RestorauntItems';
-YELP_API_KEY = "n3onJjzTBVHia0rf9ZfDVemOLiErc3VUjI4q9qHk2SdyLat_ajgdUKG7YSwu50QpblvRavX4yKXi0549iisQz46wpstIDCt9hgOhWGkde8NI1MTjhA7Kko_2o3JAZnYx"
+YELP_API_KEY = ""
 const Home = () => {
     const [restourantData, setRestourantData] = React.useState(localRestaurants)
 

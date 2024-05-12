@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import {Ionicons, AntDesign} from "react-native-vector-icons"
+const dotenv = require('dotenv');
+dotenv.config()
 
 const SearchBar = ({cityHandler}) => {
     return (
@@ -32,7 +34,7 @@ const SearchBar = ({cityHandler}) => {
                     <Text>Search</Text>
                 </View>
             )}
-            query={{key: 'AIzaSyAEVyvH3FwMRGEim5KwwzoM_YeT5BnEEdg'}}
+            query={{key: 'yourkey'}}
             onPress={(data, details=null) => {
                 const city = data.description.split(",")[0]
                 cityHandler(city)
