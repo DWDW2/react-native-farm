@@ -2,9 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import {Ionicons, AntDesign} from "react-native-vector-icons"
-const dotenv = require('dotenv');
-dotenv.config()
-
+import {GOOGLE_API} from '@env'
 const SearchBar = ({cityHandler}) => {
     return (
         <View style={{flexDirection:"row", marginTop:15}}>
@@ -34,7 +32,7 @@ const SearchBar = ({cityHandler}) => {
                     <Text>Search</Text>
                 </View>
             )}
-            query={{key: 'yourkey'}}
+            query={{key: `${GOOGLE_API}`}}
             onPress={(data, details=null) => {
                 const city = data.description.split(",")[0]
                 cityHandler(city)
