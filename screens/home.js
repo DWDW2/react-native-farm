@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, SafeAreaView, StatusBar, ScrollView } from 'react-native';
-import HeaderApp from '../components/header';
-import SearchBar from '../components/SearchBar';
-import Categories from '../components/Categories';
-import RestorauntItems, {localRestaurants} from '../components/RestorauntItems';
+import HeaderApp from '../components/home/header';
+import SearchBar from '../components/home/SearchBar';
+import Categories from '../components/home/Categories';
+import RestorauntItems, {localRestaurants} from '../components/home/RestorauntItems';
 import {YELP_API_KEY} from '@env'
 YELP_API_KEY = `${YELP_API_KEY}`
 const Home = () => {
