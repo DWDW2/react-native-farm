@@ -3,9 +3,7 @@ import { StyleSheet, View, Image, Text} from 'react-native';
 
 const About = () => {
     return (
-        <View style={{
-            margin:20,
-        }}>
+        <View>
             <RestourantImage image={image} />
             <RestourantTitle text={title} />
             <RestourantDescription description={description} />
