@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Image } from 'react-native-elements';
+import { Image, Text } from 'react-native-elements';
 
 
 const source =  [
@@ -38,30 +38,41 @@ const source =  [
 
 
 
-const MenuItem = () => {
+const MenuItems = () => {
     return (
         <View style={{
             flexDirection:'row',
-            margin:10,
+            marginTop:20,
+            justifyContent:'space-between'
         }}>
-            <MenuImage uri='' />
-            
+            <MenuDescription />
+            <MenuImage uri={source[0].image} />
         </View>
+        
     );
 }
 
 const MenuImage = (props) => {
     return(
         <View style={{
-            width:100,
-            height:'100%',
             borderRadius:20,
         }}>
-            <Image source={{uri:props.uri}} />
+            <Image source={props.uri} style={{
+                width:60,
+                height: 60
+            }}/>
+        </View>
+    )
+}
+
+const MenuDescription = (props) => {
+    return(
+        <View>
+            <Text>Helo</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({})
 
-export default MenuItem;
+export default MenuItems;
