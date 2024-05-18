@@ -42,10 +42,10 @@ const MenuItems = () => {
     return (
         <View style={{
             flexDirection:'row',
-            marginTop:20,
-            justifyContent:'space-between'
+            justifyContent:'space-between',
+            margin:20
         }}>
-            <MenuDescription />
+            <MenuDescription text='heloo'/>
             <MenuImage uri={source[0].image} />
         </View>
         
@@ -67,8 +67,10 @@ const MenuImage = (props) => {
 
 const MenuDescription = (props) => {
     return(
-        <View>
-            <Text>Helo</Text>
+        <View style={{width:240, justifyContent:'space-evenly'}}>
+            <Text>{props.text}</Text>
+            <Text>{props.text}</Text>
+            <Text>{props.text}</Text>
         </View>
     )
 }

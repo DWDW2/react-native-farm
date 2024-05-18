@@ -8,7 +8,7 @@ const RestourantDetail = () => {
     return (
         <View>
             <About />
-            <Divider width={2} style={{ marginHorizontal:20}} />
+            <Divider width={2} style={{marginTop:10}}/>
             <MenuItems />
         </View>
     );
