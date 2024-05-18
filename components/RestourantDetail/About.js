@@ -2,45 +2,25 @@ import React from 'react';
 import { StyleSheet, View, Image, Text} from 'react-native';
 
 
-const source =  [
-    {
-      image: require("../../assets/images/shopping-bag.png"),
-      text: "Pick-up",
-    },
-    {
-      image: require("../../assets/images/soft-drink.png"),
-      text: "Soft Drinks",
-    },
-    {
-      image: require("../../assets/images/bread.png"),
-      text: "Bakery Items",
-    },
-    {
-      image: require("../../assets/images/fast-food.png"),
-      text: "Fast Foods",
-    },
-    {
-      image: require("../../assets/images/deals.png"),
-      text: "Deals",
-    },
-    {
-      image: require("../../assets/images/coffee.png"),
-      text: "Coffee & Tea",
-    },
-    {
-      image: require("../../assets/images/desserts.png"),
-      text: "Desserts",
-    },
-  ];
-
+const yelpRestourantInfo = {
+  name: 'Kaxakks',
+  image: '',
+  price: '$$',
+  reviews: 1500,
+  rating: 4.5,
+  categories: [{title: 'cojoajjojjo'}, {title:'comfort foofofoof'}]
+}
+const {name, image, price, reviews, rating, categories} = yelpRestourantInfo
+const formattedCategories = categories.map((cat) => cat.title).join(' | ')
+const description = `${formattedCategories} ${price ? ' | ' + price + ' | ' : '|'} ${reviews}`
 
 
 const About = () => {
     return (
         <View>
-            <RestourantImage image={source[0].image} />
-            <RestourantTitle text={source[0].text} />
-            <RestourantDescription description="best food in the world you can find here" />
+            <RestourantImage image={image} />
+            <RestourantTitle text={name} />
+            <RestourantDescription description= {description} />
         </View>
     );
 }

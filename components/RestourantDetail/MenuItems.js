@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Image, Text } from 'react-native-elements';
+import { Divider, Image, Text } from 'react-native-elements';
 
 
 const source =  [
@@ -40,6 +40,7 @@ const source =  [
 
 const MenuItems = () => {
     return (
+      <View> 
         <View style={{
             flexDirection:'row',
             justifyContent:'space-between',
@@ -47,19 +48,19 @@ const MenuItems = () => {
         }}>
             <MenuDescription text='heloo'/>
             <MenuImage uri={source[0].image} />
-        </View>
-        
+        </View>       
+        <Divider />
+      </View>
     );
 }
 
 const MenuImage = (props) => {
     return(
-        <View style={{
-            borderRadius:20,
-        }}>
+        <View>
             <Image source={props.uri} style={{
-                width:60,
-                height: 60
+                width:100,
+                height: 100,
+                borderRadius:20,
             }}/>
         </View>
     )
@@ -68,9 +69,9 @@ const MenuImage = (props) => {
 const MenuDescription = (props) => {
     return(
         <View style={{width:240, justifyContent:'space-evenly'}}>
-            <Text>{props.text}</Text>
-            <Text>{props.text}</Text>
-            <Text>{props.text}</Text>
+            <Text style={{fontSize:20, fontWeight:'600'}}>{props.text}</Text>
+            <Text style={{fontSize:18}}>{props.text}</Text>
+            <Text style={{fontSize:12}}>{props.text}</Text>
         </View>
     )
 }
